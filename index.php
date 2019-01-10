@@ -18,26 +18,29 @@ $get = file_get_contents($url);
 
 if($message == "/start") {
 $scrivi = true;
-sendMessage ($chatid, "Tra 10 minuti
-cominciano i giochi");
-sleep(600);
+
+sendMessage ($chatid, "Tra 10 minuti cominciano i giochi");
+sleep(20);
+
 sendMessage ($chatid, "Cominciano i giochi!");
 sleep(5);
+
 sendMessage ($chatid, "Parola: C_ _ _ _ _ O");
+
+
 } elseif ($message == "Cavallo") {
 if($scrivi) {
 $scrivi = false;
 sendMessage ($chatid, "Indovinato!");
+
 }} elseif ($scrivi) {
 if($scrivi) {
 sendMessage ($chatid, "Sbagliato!");
+
 }}
-
-# Non sono sicuro funzioni, ma il session_write_close() dovrebbe permettere al resto del codice di andare nonostante lo sleep, in modo da permettere ai suggerimenti di attivarsi dopo tot tempo. Da testare.
-
 if ($scrivi) {
 session_write_close();
-sleep(60)
+sleep(60);
 if ($scrivi) {
 goto indizio1;
 }
@@ -46,13 +49,9 @@ sleep(60);
 if ($scrivi) {
 goto indizio2;
 
-# Eccetera eccetera, in base a quanti indizi vuoi mettere.
-
 }}
-
 indizio1:
 sendMessage ($chatid, "Primo suggerimento");
-
 indizio2:
-sendMessage ($chatid, "Secondo suggerimento")
+sendMessage ($chatid, "Secondo suggerimento");
 ?>
