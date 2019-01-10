@@ -23,10 +23,7 @@ sendMessage ($chatid, "Tra 10 minuti cominciano i giochi");
 sleep(10);
 sendMessage ($chatid, "Cominciano i giochi!");
 sleep(5);
-sendMessage ($chatid, "Parola: C_ _ _ _ _ O");
-sleep(10);
-$message = $update['message']['text'];
-  
+sendMessage ($chatid, "Parola: C_ _ _ _ _ O"); 
   
 } elseif ($message == "Cavallo") {
 ob_flush();
