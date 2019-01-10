@@ -20,7 +20,7 @@ if($message == "/start") {
 $scrivi = true;
 
 sendMessage ($chatid, "Tra 10 minuti cominciano i giochi");
-sleep(20);
+sleep(10);
 
 sendMessage ($chatid, "Cominciano i giochi!");
 sleep(5);
@@ -39,13 +39,11 @@ sendMessage ($chatid, "Sbagliato!");
 
 }}
 if ($scrivi) {
-session_write_close();
-sleep(60);
+sleep(10);
 if ($scrivi) {
 goto indizio1;
 }
-session_write_close();
-sleep(60);
+sleep(10);
 if ($scrivi) {
 goto indizio2;
 
