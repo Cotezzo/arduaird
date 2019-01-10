@@ -43,7 +43,7 @@ goto indizio1;
 }
 session_write_close();
 sleep(60);
-If ($scrivi) {
+if ($scrivi) {
 goto indizio2;
 
 # Eccetera eccetera, in base a quanti indizi vuoi mettere.
