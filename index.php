@@ -16,6 +16,7 @@ $get = file_get_contents($url);
 }
 
 if($message == "/start") {
+
 sendMessage ($chatid, $message);
 ob_flush();
 flush();
@@ -25,8 +26,16 @@ sleep(10);
 sendMessage ($chatid, "Cominciano i giochi!");
 sleep(5);
 sendMessage ($chatid, "Parola: C_ _ _ _ _ O"); 
+sleep(10);
+$input = file_get_contents("php://input");
+$update = json_decode($input, true);
+
+$message = $update['message']['text'];
+$chatid = $update['message']['chat']['id'];
   
-} elseif ($message == "Cavallo") {
+}
+
+if ($message == "Cavallo") {
 ob_flush();
 flush();
 if($scrivi) {
