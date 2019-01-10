@@ -15,40 +15,7 @@ $url = "https://api.telegram.org/$api/sendMessage?chat_id=".$chatid."&text=".url
 $get = file_get_contents($url);
 }
 
+$scrivi = true
+sendMessage($chatid, $scrivi)
 
-if($message == "/start") {
-$scrivi = true;
-
-sendMessage ($chatid, "Tra 10 minuti cominciano i giochi");
-sleep(10);
-
-sendMessage ($chatid, "Cominciano i giochi!");
-sleep(5);
-
-sendMessage ($chatid, "Parola: C_ _ _ _ _ O");
-
-} elseif ($message == "Cavallo") {
-if($scrivi) {
-$scrivi = false;
-sendMessage ($chatid, "Indovinato!");
-
-}} elseif ($scrivi) {
-if($scrivi) {
-sendMessage ($chatid, "Sbagliato!");
-
-}}
-if ($scrivi) {
-sleep(10);
-if ($scrivi) {
-goto indizio1;
-}
-sleep(10);
-if ($scrivi) {
-goto indizio2;
-
-}}
-indizio1:
-sendMessage ($chatid, "Primo suggerimento");
-indizio2:
-sendMessage ($chatid, "Secondo suggerimento");
 ?>
