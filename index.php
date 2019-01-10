@@ -16,6 +16,7 @@ $get = file_get_contents($url);
 }
 
 if($message == "/start") {
+sendMessage ($chatid, $message)
 ob_flush();
 flush();
 $scrivi = true;
