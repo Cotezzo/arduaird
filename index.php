@@ -16,6 +16,8 @@ $get = file_get_contents($url);
 }
 
 if ($message == "/sutart") {
+flush();
+ob_flush();
 $scrivi = true;
 sendMessage($chatid, $scrivi);
 sleep(5);
