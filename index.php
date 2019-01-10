@@ -55,3 +55,4 @@ sendMessage ($chatid, "Primo suggerimento");
 
 indizio2:
 sendMessage ($chatid, "Secondo suggerimento")
+?>
