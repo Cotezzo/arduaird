@@ -15,9 +15,13 @@ $url = "https://api.telegram.org/$api/sendMessage?chat_id=".$chatid."&text=".url
 $get = file_get_contents($url);
 }
 
-if ($message == "/start") {
+if ($message == "/sutart") {
 $scrivi = true;
 sendMessage($chatid, $scrivi);
-}
+sleep(5);
+$scrivi = false;
+if ($scrivi == false) {
+sendMessage($chatid, "NO!!");
+}}
 
 ?>
