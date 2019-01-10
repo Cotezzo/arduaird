@@ -38,7 +38,7 @@ sendMessage ($chatid, "Sbagliato!");
 if ($scrivi) {
 session_write_close();
 sleep(60)
-If ($scrivi) {
+if ($scrivi) {
 goto indizio1;
 }
 session_write_close();
