@@ -16,7 +16,7 @@ $get = file_get_contents($url);
 }
 
 
-if($message == "/start") {
+if($message === "/start") {
 $scrivi = true;
 
 sendMessage ($chatid, "Tra 10 minuti cominciano i giochi");
@@ -28,7 +28,7 @@ sleep(5);
 sendMessage ($chatid, "Parola: C_ _ _ _ _ O");
 
 
-} elseif ($message == "Cavallo") {
+} elseif ($message === "Cavallo") {
 if($scrivi) {
 $scrivi = false;
 sendMessage ($chatid, "Indovinato!");
