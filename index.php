@@ -26,7 +26,6 @@ sendMessage ($chatid, "Cominciano i giochi!");
 sleep(5);
 
 sendMessage ($chatid, "Parola: C_ _ _ _ _ O");
-flush();
 
 } elseif ($message == "Cavallo") {
 if($scrivi) {
