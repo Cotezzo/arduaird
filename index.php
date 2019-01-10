@@ -16,7 +16,7 @@ $get = file_get_contents($url);
 }
 
 if ($message == "/start") {
-$scrivi = true
+$scrivi = true;
 sendMessage($chatid, $scrivi);
 }
 
