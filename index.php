@@ -18,7 +18,7 @@ $get = file_get_contents($url);
 switch($message)
 {
   case "/start":
-    static $x = null
+    static $x = null;
     sendMessage ($chatid, "Tra 10 minuti cominciano i giochi");
     sleep(10);
     sendMessage ($chatid, "Cominciano i giochi!");
