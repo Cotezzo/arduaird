@@ -15,7 +15,7 @@ $url = "https://api.telegram.org/$api/sendMessage?chat_id=".$chatid."&text=".url
 $get = file_get_contents($url);
 }
 
-$x = true;
+#$x = true;
   
 switch($message)
 {
