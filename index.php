@@ -28,6 +28,7 @@ switch($message)
     sendMessage ($chatid, "Parola: C_ _ _ _ _ O"); 
     break;    
   case "Cavallo":
+    sendMessage ($chatid, $x);
     if ($x) {
     sendMessage ($chatid, "Hai indovinato!");
       #$x = false;
