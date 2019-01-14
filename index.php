@@ -20,7 +20,7 @@ $scrivi = true;
 switch($message)
 {
   case "/start":
-    global $scrivi = true;
+    $GLOBALS['scrivi'] = true;
     sendMessage ($chatid, "Tra 10 minuti cominciano i giochi");
     sleep(10);
     sendMessage ($chatid, "Cominciano i giochi!");
@@ -31,7 +31,7 @@ switch($message)
   case "Cavallo":
     if ($scrivi) {
     sendMessage ($chatid, "Hai indovinato!");
-    global $scrivi = false;
+    $GLOBALS['scrivi'] = false;
     }
     break;
     
