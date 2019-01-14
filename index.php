@@ -28,7 +28,7 @@ switch($message)
   case "Cavallo":
     if (empty($x)) {
     sendMessage ($chatid, "Hai indovinato!");
-    $x = true;
+    $GLOBALS['x'] = 3;
     }
     break;   
   default:
