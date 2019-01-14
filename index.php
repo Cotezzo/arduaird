@@ -28,10 +28,10 @@ switch($message)
     break;
     
   case "Cavallo":
-    if ($scrivi) {
+    #if ($scrivi) {
     sendMessage ($chatid, "Hai indovinato!");
     $scrivi = false;
-    }
+    #}
     break;
     
   default:
