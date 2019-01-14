@@ -20,7 +20,7 @@ static $x = false;
 switch($message)
 {
   case "/start":
-    $x = null;
+    static $x = false;
     sendMessage ($chatid, "Tra 10 minuti cominciano i giochi");
     sleep(10);
     sendMessage ($chatid, "Cominciano i giochi!");
@@ -32,7 +32,12 @@ switch($message)
     sendMessage ($chatid, "Hai indovinato!");
     static $x = 3;
     }
-    break;   
+    break;
+  case "/stop":
+    ob_flush();
+    flush();
+    static $x = false;
+    break;
   default:
     if (empty($x)) {
     sendMessage ($chatid, "Hai sbagliato!");
