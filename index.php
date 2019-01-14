@@ -15,7 +15,7 @@ $url = "https://api.telegram.org/$api/sendMessage?chat_id=".$chatid."&text=".url
 $get = file_get_contents($url);
 }
 
-$x = false;
+static $x = false;
 
 switch($message)
 {
@@ -30,7 +30,7 @@ switch($message)
   case "Cavallo":
     if (empty($x)) {
     sendMessage ($chatid, "Hai indovinato!");
-    static $x = true;
+    $x = true;
     }
     break;
   case "/stop":
