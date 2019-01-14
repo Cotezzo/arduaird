@@ -36,7 +36,7 @@ switch($message)
   case "/stop":
     ob_flush();
     flush();
-    static $x = false;
+    $x = false;
     break;
   default:
     if (empty($x)) {
