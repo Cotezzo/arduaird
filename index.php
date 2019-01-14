@@ -19,7 +19,7 @@ $get = file_get_contents($url);
 switch($message)
 {
   case "/start":
-    $scrivi = true
+    $scrivi = true;
     sendMessage ($chatid, "Tra 10 minuti cominciano i giochi");
     sleep(10);
     sendMessage ($chatid, "Cominciano i giochi!");
@@ -29,16 +29,16 @@ switch($message)
     
   case "Cavallo":
     if ($scrivi) {
-    sendMessage($chatid, "Hai indovinato!")
-    $scrivi = false
+    sendMessage($chatid, "Hai indovinato!");
+    $scrivi = false;
     }
     break;
     
   default:
     if ($scrivi) {
-    sendMessage ($chatid, "Hai sbagliato!")
+    sendMessage ($chatid, "Hai sbagliato!");
     } else {
-      sendMessage ($chatid, "Basta inviare messaggi!")
+      sendMessage ($chatid, "Basta inviare messaggi!");
     }
 }
 
