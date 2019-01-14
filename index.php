@@ -42,6 +42,10 @@ switch($message)
 
 sendMessage ($chatid, $x);
 
+if ($x == 3) {
+  static $x = 3;
+}
+
 if (empty($x)) {
 goto indizio1;
 }
