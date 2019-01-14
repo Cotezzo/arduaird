@@ -42,8 +42,8 @@ switch($message)
     sendMessage ($chatid, "Basta inviare messaggi!");
     }
 }
-ob_flush();
-flush();
+#ob_flush();
+#flush();
 
 if ($x) {
 goto indizio1;
