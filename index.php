@@ -26,17 +26,15 @@ switch($message)
     sendMessage ($chatid, "Cominciano i giochi!");
     sleep(5);
     sendMessage ($chatid, "Parola: C_ _ _ _ _ O"); 
-    break;
-    
+    break;    
   case "Cavallo":
     if ($x) {
     sendMessage ($chatid, "Hai indovinato!");
       sendMessage ($chatid, $x);
-      $x = false;
+      #$x = false;
       sendMessage ($chatid, $x);
     }
-    break;
-    
+    break;   
   default:
     if ($x) {
     sendMessage ($chatid, "Hai sbagliato!");
@@ -44,8 +42,6 @@ switch($message)
     sendMessage ($chatid, "Basta inviare messaggi!");
     }
 }
-#ob_flush();
-#flush();
 
 if ($x) {
 goto indizio1;
