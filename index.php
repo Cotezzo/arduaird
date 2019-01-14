@@ -31,6 +31,9 @@ switch($message)
   case "Cavallo":
     if ($x) {
     sendMessage ($chatid, "Hai indovinato!");
+      sendMessage ($chatid, $x);
+      $x = false;
+      sendMessage ($chatid, $x);
     }
     break;
     
