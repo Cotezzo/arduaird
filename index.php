@@ -3,7 +3,7 @@
 $api = "bot786840940:AAHJXBvvXqAtE8Qp0xDHc5zlm924Kmbwh4E";
 
 $update = file_get_contents("php://input");
-$update = json_decode($input, true);
+$update = json_decode($update, true);
 
 $message = $update['message']['text'];
 $chatid = $update['message']['chat']['id'];
