@@ -29,7 +29,7 @@ switch($message)
     
   case "Cavallo":
     if ($scrivi) {
-    sendMessage($chatid, "Hai indovinato!");
+    sendMessage ($chatid, "Hai indovinato!");
     $scrivi = false;
     }
     break;
@@ -38,7 +38,7 @@ switch($message)
     if ($scrivi) {
     sendMessage ($chatid, "Hai sbagliato!");
     } else {
-      sendMessage ($chatid, "Basta inviare messaggi!");
+    sendMessage ($chatid, "Basta inviare messaggi!");
     }
 }
 ob_flush();
