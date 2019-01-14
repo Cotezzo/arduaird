@@ -41,6 +41,8 @@ switch($message)
       sendMessage ($chatid, "Basta inviare messaggi!");
     }
 }
+ob_flush();
+flush();
 
 if ($scrivi) {
 sleep(1);
