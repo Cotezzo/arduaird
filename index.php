@@ -15,7 +15,7 @@ $url = "https://api.telegram.org/$api/sendMessage?chat_id=".$chatid."&text=".url
 $get = file_get_contents($url);
 }
 
-static $x = false;
+$x = false;
 
 switch($message)
 {
@@ -36,7 +36,7 @@ switch($message)
   case "/stop":
     ob_flush();
     flush();
-    $x = false;
+    static $x = false;
     break;
   default:
     if (empty($x)) {
