@@ -20,6 +20,8 @@ static $x = 0;
 switch($message)
 {
   case "/start":
+    ob_flush();
+      flush();
     sendMessage ($chatid, "Tra 10 minuti cominciano i giochi");
     sleep(10);
     sendMessage ($chatid, "Cominciano i giochi!");
