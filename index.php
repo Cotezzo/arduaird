@@ -27,14 +27,14 @@ switch($message)
     break;
     
   case "Cavallo":
-    if ($x == true) {
+    if ($x) {
     sendMessage ($chatid, "Hai indovinato!");
     $GLOBALS['x'] = false;
     }
     break;
     
   default:
-    if ($x == true) {
+    if ($x) {
     sendMessage ($chatid, "Hai sbagliato!");
     } else {
     sendMessage ($chatid, "Basta inviare messaggi!");
@@ -43,7 +43,7 @@ switch($message)
 ob_flush();
 flush();
 
-if ($x == true) {
+if ($x) {
 goto indizio1;
 }
 
