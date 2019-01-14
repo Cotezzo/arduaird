@@ -15,13 +15,13 @@ $url = "https://api.telegram.org/$api/sendMessage?chat_id=".$chatid."&text=".url
 $get = file_get_contents($url);
 }
 
-static $x = 0;
+$x = null;
 
 switch($message)
 {
   case "/start":
-    ob_flush();
-      flush();
+    #ob_flush();
+     #flush();
     sendMessage ($chatid, "Tra 10 minuti cominciano i giochi");
     sleep(10);
     sendMessage ($chatid, "Cominciano i giochi!");
@@ -29,13 +29,13 @@ switch($message)
     sendMessage ($chatid, "Parola: C_ _ _ _ _ O"); 
     break;    
   case "Cavallo":
-    if (isset($x)) {
+    if (!isset($x)) {
     sendMessage ($chatid, "Hai indovinato!");
     $GLOBALS['x'] = 3;
     }
     break;   
   default:
-    if (isset($x)) {
+    if (!isset($x)) {
     sendMessage ($chatid, "Hai sbagliato!");
     } else {
     sendMessage ($chatid, "Basta inviare messaggi!");
@@ -48,7 +48,7 @@ if ($x == 3) {
   static $x = 3;
 }
 
-if (isset($x)) {
+if (!isset($x)) {
 goto indizio1;
 }
 
