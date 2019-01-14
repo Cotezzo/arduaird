@@ -20,7 +20,7 @@ static $x = false;
 switch($message)
 {
   case "/start":
-    static $x = null;
+    $x = false;
     sendMessage ($chatid, "Tra 10 minuti cominciano i giochi");
     sleep(10);
     sendMessage ($chatid, "Cominciano i giochi!");
@@ -48,7 +48,7 @@ switch($message)
 
 sendMessage ($chatid, $x);
 
-if (empty($x)) {
+if ($x == false) {
 goto indizio1;
 }
 
