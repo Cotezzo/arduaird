@@ -27,13 +27,13 @@ switch($message)
     sendMessage ($chatid, "Parola: C_ _ _ _ _ O"); 
     break;    
   case "Cavallo":
-    if (empty($x)) {
+    if (isset($x)) {
     sendMessage ($chatid, "Hai indovinato!");
     $GLOBALS['x'] = 3;
     }
     break;   
   default:
-    if (empty($x)) {
+    if (isset($x)) {
     sendMessage ($chatid, "Hai sbagliato!");
     } else {
     sendMessage ($chatid, "Basta inviare messaggi!");
@@ -46,7 +46,7 @@ if ($x == 3) {
   static $x = 3;
 }
 
-if (empty($x)) {
+if (isset($x)) {
 goto indizio1;
 }
 
