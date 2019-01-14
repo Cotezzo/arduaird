@@ -30,7 +30,7 @@ switch($message)
   case "Cavallo":
     if (empty($x)) {
     sendMessage ($chatid, "Hai indovinato!");
-    $x = 3;
+    static $x = 3;
     }
     break;   
   default:
