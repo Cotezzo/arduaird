@@ -15,10 +15,12 @@ $url = "https://api.telegram.org/$api/sendMessage?chat_id=".$chatid."&text=".url
 $get = file_get_contents($url);
 }
 
+$x = null;
+  
 switch($message)
 {
   case "/start":
-    $GLOBALS['x'] = true;
+    $x = true;
     sendMessage ($chatid, "Tra 10 minuti cominciano i giochi");
     sleep(10);
     sendMessage ($chatid, "Cominciano i giochi!");
